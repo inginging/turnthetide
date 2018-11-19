@@ -1,0 +1,17 @@
+.c-logo {
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid $blue-3t;
+
+    @include media-breakpoint-up(md) { 
+        background-color: $white;
+        position: relative; 
+        top: 2rem; 
+        z-index: 10;
+        margin-bottom: 0;
+    }
+} 
+
+.c-logo__link {
+    display: block;
+    padding: 0.5rem 1rem 0 1rem; 
+}

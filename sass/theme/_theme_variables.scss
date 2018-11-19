@@ -2,5 +2,70 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
+$blue-3t:       #1c407f;
+$green-hmbc:    #13a79d; 
+$brown-gray:    #888888; 
 
-$primary: #0061ff; // Thats a sample how you could change a BootStrap variable.
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue-3t":      $blue-3t,
+    "green-hmbc":   $green-hmbc,
+    "brown-gray":   $brown-gray
+  ),
+  $colors
+);
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "blue-3t":       $blue-3t,
+    "green-hmbc":    $green-hmbc,
+    "brown-gray":    $brown-gray
+  ),
+  $theme-colors
+);
+
+$white:             #fff;
+$gray-light:        #f8f9fa;
+$gray-extra-light:  #dadada;
+$gray-medium:       #565656;
+$gray-dark:         #343434;
+$black:             #000;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "dark": $gray-light,
+    "200": $gray-extra-light,
+    "300": $gray-medium,
+    "400": $gray-dark,
+  ),
+  $grays
+);
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 3),
+    7: ($spacer * 4)
+  ),
+  $spacers
+);

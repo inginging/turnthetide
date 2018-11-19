@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
-	<div class="wrapper" id="wrapper-static-hero">
+	<div id="wrapper-static-hero">
 
 			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
 
