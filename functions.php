@@ -78,3 +78,14 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+/**
+ * Load Custom post types.
+ */
+require get_template_directory() . '/inc/custom-post-types.php'; 
+
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_action('upload_mimes', 'cc_mime_types'); 

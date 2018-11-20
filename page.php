@@ -18,6 +18,13 @@ get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
 
+$args = array(
+    'post_type' => 'projects',
+    );
+
+$projects = new WP_Query( $args );
+
+
 ?>
 
 <?php if ( is_front_page()  ) : ?> <!-- inge: Removed && is_home() here -->
@@ -37,7 +44,31 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<!-- Check if it is the home page -->
+					<?php if ( is_front_page()  ) : ?>
+						
+						<h1><?php the_field('home_title', $post->ID); ?></h1>
+
+						<!-- Loop through custom post type for projects -->
+						<?php 					
+							if( $projects->have_posts() ) {
+								while( $projects->have_posts() ) {
+								$projects->the_post();
+								?>
+									<?php the_title() ?>
+
+								<?php
+								}
+							}
+						?>
+
+					<?php endif; ?> 
+
+					<?php if ( !is_front_page()  ) : ?>
+
+						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+
+					<?php endif; // end of the loop. ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

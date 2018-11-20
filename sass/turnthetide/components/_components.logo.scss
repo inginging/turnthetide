@@ -1,8 +1,8 @@
 .c-logo {
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid $blue-3t;
-
+    
     @include media-breakpoint-up(md) { 
+        border-bottom: 2px solid $blue-3t;
         background-color: $white;
         position: relative; 
         top: 2rem; 
@@ -13,5 +13,10 @@
 
 .c-logo__link {
     display: block;
-    padding: 0.5rem 1rem 0 1rem; 
+    padding: 0 1rem 0.25rem 1rem; 
+}
+
+.c-logo__img {
+    width: 100%;
+    max-width: 285px;
 }

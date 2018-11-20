@@ -25,10 +25,22 @@
             height: 2px;
             width: calc(100% - 2rem);
             background-color: $gray-medium;
-            bottom: 0;
+            bottom: 0.25rem;
+            left: 1rem;
+        } 
+    }
+
+    .active .nav-link {
+        color: $gray-medium;
+        &:after {
+            content: '';
+            padding: 0 0.5rem;
+            position: absolute;
+            height: 2px;
+            width: calc(100% - 2rem);
+            background-color: $gray-medium;
+            bottom: 0.25rem;
             left: 1rem;
         }
-
-
     }
 }
