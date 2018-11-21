@@ -1,0 +1,21 @@
+.c-progress {
+    display: flex;
+    height: 0.5rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: rgba(19, 167, 157, 0.2);
+    border-radius: .25rem;
+    max-width: 300px;
+}
+  
+.c-progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $green-hmbc;
+    border-radius: .25rem;
+    transition: width .6s ease;
+}

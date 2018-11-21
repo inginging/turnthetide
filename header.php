@@ -37,9 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-md">
 
-		<?php if ( 'container' == $container ) : ?>
-			<div class="container" >
-		<?php endif; ?>
+			<div class="container">
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) : ?>

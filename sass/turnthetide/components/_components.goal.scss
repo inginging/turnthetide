@@ -1,0 +1,39 @@
+.c-goal-block {
+  position: relative;
+}
+
+.c-goal-block__title-container {
+    position: absolute;
+    background-color: $white;
+    display: inline-block;
+    padding: 1rem;
+    border-bottom: 2px solid $blue-3t; 
+    left: 1rem;
+}
+
+.c-goal-block__label {
+    color: $gray-dark;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.c-goal-block__img {
+    margin-top: 2rem;
+}
+
+.c-goal-block__goal-container {
+    position: absolute;
+    background-color: $white;
+    padding: 1rem;
+    border-bottom: 2px solid $green-hmbc; 
+    left: 1rem;
+    bottom: -2rem;
+    font-size: 1.5rem;
+    color: $gray-dark;
+    width: calc(100% - 2rem);
+}
+
+.c-goal-block__text-light {
+    color: $gray-light;
+}

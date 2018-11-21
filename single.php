@@ -11,6 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
+
+$args = array(
+    'post_type' => 'projects',
+    );
+
+$projects = new WP_Query( $args );
 ?>
 
 <div class="wrapper" id="single-wrapper">
@@ -25,9 +31,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
-
-						<?php understrap_post_nav(); ?>
+					<?php 
+					if( $projects->have_posts() ) {
+						get_template_part( 'post-templates/projects', 'single' ); 
+					} else {
+							get_template_part( 'loop-templates/content', 'single' );
+					} ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

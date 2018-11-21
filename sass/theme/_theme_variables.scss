@@ -29,7 +29,7 @@ $theme-colors: map-merge(
 );
 
 $white:             #fff;
-$gray-light:        #f8f9fa;
+$gray-light:        #888888;
 $gray-extra-light:  #dadada;
 $gray-medium:       #565656;
 $gray-dark:         #343434;
@@ -39,6 +39,7 @@ $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
   (
+    "white": $white,
     "dark": $gray-light,
     "200": $gray-extra-light,
     "300": $gray-medium,

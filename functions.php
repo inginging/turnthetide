@@ -84,6 +84,11 @@ require get_template_directory() . '/inc/editor.php';
  */
 require get_template_directory() . '/inc/custom-post-types.php'; 
 
+/**
+ * Load Custom post types.
+ */
+
+
 function cc_mime_types($mimes) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;

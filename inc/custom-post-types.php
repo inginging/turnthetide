@@ -20,12 +20,30 @@ function register_projects_init() {
         'labels'             => $project_labels,
         'public'             => true,
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
     );
     register_post_type('projects', $project_args);
+}
+
+function register_goals_init() {
+    // Register Products
+    $goal_labels = array(
+        'name'               => 'Goals',
+        'singular_name'      => 'Goal',
+        'menu_name'          => 'Goals'
+    );
+    $goal_args = array(
+        'labels'             => $goal_labels,
+        'public'             => true,
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
+    );
+    register_post_type('goals', $goal_args);
 
 }
 
 // Register Custom Post Types
 add_action('init', 'register_projects_init');
+add_action('init', 'register_goals_init');
