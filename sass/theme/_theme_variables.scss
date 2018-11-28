@@ -2,17 +2,19 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
-$blue-3t:       #1c407f;
-$green-hmbc:    #13a79d; 
-$brown-gray:    #888888; 
+$blue-3t:           #1c407f;
+$green-hmbc:        #13a79d; 
+$green-hmbc-bright: #00B8AB;
+$brown-gray:        #888888;  
 
 $colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
-    "blue-3t":      $blue-3t,
-    "green-hmbc":   $green-hmbc,
-    "brown-gray":   $brown-gray
+    "blue-3t":          $blue-3t,
+    "green-hmbc":       $green-hmbc,
+    "green-hmbc-light": $green-hmbc-bright,
+    "brown-gray":       $brown-gray
   ),
   $colors
 );
@@ -24,7 +26,7 @@ $theme-colors: map-merge(
     "blue-3t":       $blue-3t,
     "green-hmbc":    $green-hmbc,
     "brown-gray":    $brown-gray
-  ),
+  ), 
   $theme-colors
 );
 

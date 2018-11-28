@@ -1,0 +1,40 @@
+.c-content {
+    .lead {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    h2 {
+        color: $gray-dark;
+    }
+
+    figcaption {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+        width: 80%;
+        float: right;
+        text-align: left;
+    }
+
+    h2, h3, h4, p, blockquote {
+        clear: both;
+    }
+
+    .alignright {
+        display: block;
+        margin-right: 0;
+    }
+
+    figure {
+        text-align: right;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    figure img {
+        width: 80% !important; 
+        margin-bottom: 0.5rem;
+
+    }
+
+} 

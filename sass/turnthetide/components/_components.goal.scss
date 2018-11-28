@@ -34,6 +34,22 @@
     width: calc(100% - 2rem);
 }
 
+.c-goal-block__text {
+    @include media-breakpoint-up(md) { 
+        flex-grow: 1;
+    }
+}
+
+.c-goal-block__cta {
+    display: i
+}
+
 .c-goal-block__text-light {
     color: $gray-light;
+}
+
+// Styles for goals single
+
+.c-goal__img {
+    width: 100%;
 }

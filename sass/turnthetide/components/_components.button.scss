@@ -1,0 +1,31 @@
+.c-button {
+    padding: .25rem 1rem .35rem;
+    background-color: $green-hmbc;
+    border-radius: 1rem;
+    color: $white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold; 
+    transition: background-color 0.3s;
+    display: inline-block;
+
+    &:hover {
+        background-color: $green-hmbc-bright;
+        transition: all 0.3s;
+        color: $white;
+        text-decoration: none;
+    } 
+}
+
+.c-button--inversed {
+    background-color: $white;
+    color: $green-hmbc;
+    border: 2px solid $green-hmbc;
+
+    &:hover {
+        background-color: $white;
+        border-color: $green-hmbc-bright;
+        color: $green-hmbc-bright;
+    }
+
+}

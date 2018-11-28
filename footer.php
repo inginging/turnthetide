@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<footer class="wrapper c-footer mt-4" id="wrapper-footer">
 
 	<div class="container">
 
@@ -24,15 +24,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+				<footer >
 
-					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
-
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
+				</footer>
 
 			</div><!--col end -->
 
@@ -40,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- container end -->
 
-</div><!-- wrapper end -->
+</footer><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 

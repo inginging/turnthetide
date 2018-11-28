@@ -1,11 +1,52 @@
+body {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
 h1 {
-    text-align: center;
-    max-width: 768px;
-    display: block;
+    font-family: Roboto;
+    font-weight: 300;
     margin: 0 auto;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+h1.callout {
+    color: $green-hmbc;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    max-width: 768px;
 }
 
 h2 {
     color: $blue-3t;
 }
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.33;
+}
+
+.page-label {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: $blue-3t;
+    position: relative;
+
+    &:after {
+        content: '';
+        padding: 0 0.5rem;
+        position: absolute;
+        height: 2px;
+        width: calc(100% - 0.25rem);
+        background-color: $blue-3t;
+        bottom: -0.25rem;
+        left: 0;
+    }
+}
+

@@ -1,0 +1,7 @@
+.c-featured-image {
+    @include media-breakpoint-up(md) { 
+        text-align: center;
+        top: -4rem;
+        position: relative;
+    }
+}

@@ -1,6 +1,5 @@
 <?php
 /**
- * Template Name: Left and Right Sidebar Layout
  *
  * This template can be used to override the default template and sidebar setup
  *

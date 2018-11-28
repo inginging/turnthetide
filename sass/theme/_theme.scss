@@ -2,6 +2,8 @@
 
 @import "../turnthetide/bootstrap/bootstrap.overwrite";
 
+@import "../turnthetide/settings/settings.fonts";
+
 @import "../turnthetide/objects/objects.typography";
 
 @import "../turnthetide/components/components.logo";
@@ -9,5 +11,10 @@
 @import "../turnthetide/components/components.project";
 @import "../turnthetide/components/components.goal";
 @import "../turnthetide/components/components.progress-bar";
+@import "../turnthetide/components/components.button";
+@import "../turnthetide/components/components.content";
+@import "../turnthetide/components/components.footer";
+@import "../turnthetide/components/components.featured-image";
+@import "../turnthetide/components/components.form"; 
 
 @import "../turnthetide/utilities/utilities.gradients";

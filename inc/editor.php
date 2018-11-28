@@ -76,3 +76,4 @@ if ( ! function_exists ( 'understrap_tiny_mce_before_init' ) ) {
       return $settings;
   }
 }
+

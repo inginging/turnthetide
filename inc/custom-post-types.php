@@ -10,7 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function register_projects_init() {
-    // Register Products
     $project_labels = array(
         'name'               => 'Projects',
         'singular_name'      => 'Project',
@@ -27,7 +26,6 @@ function register_projects_init() {
 }
 
 function register_goals_init() {
-    // Register Products
     $goal_labels = array(
         'name'               => 'Goals',
         'singular_name'      => 'Goal',
@@ -41,7 +39,6 @@ function register_goals_init() {
         'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
     );
     register_post_type('goals', $goal_args);
-
 }
 
 // Register Custom Post Types

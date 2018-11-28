@@ -12,31 +12,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<?php if ( has_post_thumbnail() ) { ?>
+		<div class="container">
+			<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+		</div>
+	<?php } ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<div class="wrapper">
+		<div class="container text-center <?php if (!has_post_thumbnail() ) { echo 'mt-7'; } ?>">
+			<span class="page-label"><?php the_field('page_label') ?></span>
+			<h1><?php  the_title(); ?></h1>
+		</div>
+	</div>
 
-	</header><!-- .entry-header -->
+	<div class="wrapper pt-0"> 
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 col-xs-12">
+					<div class="c-content">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
-		<?php the_content(); ?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
-
-	</footer><!-- .entry-footer -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </article><!-- #post-## -->

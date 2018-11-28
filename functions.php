@@ -25,6 +25,11 @@ require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
+ * Register widget area.
+ */
+require get_template_directory() . '/widgets/button-widget.php';
+
+/**
  * Enqueue scripts and styles.
  */
 require get_template_directory() . '/inc/enqueue.php';
@@ -85,8 +90,19 @@ require get_template_directory() . '/inc/editor.php';
 require get_template_directory() . '/inc/custom-post-types.php'; 
 
 /**
- * Load Custom post types.
+ * Load Mollie Donation additions.
  */
+require get_template_directory() . '/inc/functions/function-mollie-donations-additions.php'; 
+
+/**
+ * Load Helpers.
+ */
+require get_template_directory() . '/inc/functions/function-sums.php'; 
+
+/**
+ * Load Advanced Custom Fields Additions
+ */
+require get_template_directory() . '/inc/functions/function-acf-additions.php'; 
 
 
 function cc_mime_types($mimes) {

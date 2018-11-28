@@ -1,0 +1,19 @@
+.c-form {
+
+    select, input[type=text], textarea {
+        color: $blue-3t;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: none;
+        border: 1px solid $gray-light;
+
+        &:active {
+            border-color: $blue-3t;
+        }
+    }
+
+    input[type=submit] {
+        border: none;
+        cursor: pointer;
+    }
+} 
