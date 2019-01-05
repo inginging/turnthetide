@@ -27,7 +27,9 @@ $goals = new WP_Query( $argsGoal );
 
 		<article>
 			<div class="container">
-				<img src="<?php the_field('goal_image') ?>" class="c-goal__img"/>
+				<div class="c-image-container">
+					<img src="<?php the_field('goal_image') ?>" class="c-goal__img"/>
+				</div>
 			</div>
 
 			<div class="wrapper">

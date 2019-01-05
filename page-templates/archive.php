@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="wrapper">
 				<div class="container text-center <?php if (!has_post_thumbnail() ) { echo 'mt-7'; } ?>">
-					<span class="page-label"><?php  the_title(); ?></span>
+					<span class="page-label"><?php the_title(); ?></span>
 					<h1><?php the_field('archive_description'); ?></h1>
 				</div>
 			</div>
@@ -62,8 +62,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<!-- the loop -->
 							<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								<?php the_excerpt(); ?>
+								<a href="<?php the_permalink(); ?>" class="c-head-link"><h2 class="mb-1"><?php the_title(); ?></h2></a>
+								<p class="mb-3"><?php the_date();?></p>
+								<div class="mb-5">
+									<?php the_excerpt(); ?>
+								</div>
 							<?php endwhile; ?>
 							<!-- end of the loop -->
 						

@@ -17,18 +17,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
-	<div class="wrapper" id="wrapper-footer-full">
 
-		<div class="<?php echo esc_attr( $container ); ?>" id="footer-full-content" tabindex="-1">
-
-			<div class="row">
-
-				<?php dynamic_sidebar( 'footerfull' ); ?>
-
-			</div>
-
+	<div class="c-footer-top">
+		<div class="container d-flex">
+			<?php dynamic_sidebar( 'footerfull' ); ?>
 		</div>
-
-	</div><!-- #wrapper-footer-full -->
+	</div>
 
 <?php endif; ?>

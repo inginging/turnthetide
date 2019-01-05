@@ -1,3 +1,39 @@
-.c-footer {
-    background-color: $gray-extra-light;
+.c-footer-top {
+    background-color: $green-hmbc-light;
+    padding: 2rem 1rem;
 }
+
+.c-footer-bottom {
+    background-color: $gray-dark;
+    padding: 1rem 0;
+    text-align: center;
+    color: $white;
+    font-size: 0.75rem;
+}
+
+.c-footer__title{
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 1.25;
+}
+
+.c-footer__content{
+    ul {
+        padding: 0;
+
+    }
+
+    li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: $blue-3t;    
+        }
+    }
+}
+

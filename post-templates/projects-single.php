@@ -17,7 +17,9 @@ $projects = new WP_Query( $argsProjects );
 ?>
 		<article>
 			<div class="container">
-				<img src="<?php the_field('project_image') ?>" class="c-project__img"/>
+				<div class="c-image-container">
+					<img src="<?php the_field('project_image') ?>" />
+				</div>
 			</div>
 
 			<div class="wrapper">

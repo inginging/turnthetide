@@ -1,5 +1,7 @@
 .c-goal-block {
   position: relative;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 
 .c-goal-block__title-container {
@@ -9,6 +11,8 @@
     padding: 1rem;
     border-bottom: 2px solid $blue-3t; 
     left: 1rem;
+    z-index: 10;
+    top: -1rem;
 }
 
 .c-goal-block__label {
@@ -46,10 +50,4 @@
 
 .c-goal-block__text-light {
     color: $gray-light;
-}
-
-// Styles for goals single
-
-.c-goal__img {
-    width: 100%;
 }

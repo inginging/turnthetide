@@ -46,3 +46,20 @@
         }
     }
 }
+
+.c-navigation-main__button {
+    .nav-link {
+        margin-left: 1rem;
+        @include button;
+        font-size: 1.25rem;
+        top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    &.active .nav-link {
+        color: $white;
+        &:after {
+            content: none;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 body {
     font-family: Roboto;
     font-weight: 400;
+    color: $gray-dark;
 }
 
 h1 {
@@ -23,6 +24,28 @@ h1.callout {
 
 h2 {
     color: $blue-3t;
+}
+
+.c-head-link {
+    text-decoration: none;
+}
+
+a.c-head-link h2 {
+    color: $blue-3t;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+    &:hover:after {
+        content: '';
+        padding: 0;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: $blue-3t;
+        bottom: -0.15rem;
+        left: 0;
+    } 
 }
 
 h3 {

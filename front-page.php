@@ -46,12 +46,12 @@ $goals = new WP_Query( $argsGoal );
 
 						<div class="container wrapper text-center">
 
-							<h1 class="callout"><?php the_field('home_title', $post->ID); ?></h1>
+							<h1 class="callout"><?php echo get_bloginfo('description'); ?></h1>
 
 						</div>
 
 						<!-- Loop through custom post type for projects -->
-						<div class="container wrapper px-3">
+						<div class="container wrapper pt-3 pb-0">
 							<div class="row">
 								<?php 					
 									if( $projects->have_posts() ) {
@@ -77,55 +77,19 @@ $goals = new WP_Query( $argsGoal );
 							</div>
 						</div>
 
-						<!-- Loop through custom post type for goals -->
-						<div class="wrapper u-bg-gradient pb-7">
-							<div class="container px-3">
-								<div class="row">
-								<?php 					
-									if( $goals->have_posts() ) {
-										while( $goals->have_posts() ) {
-										$goals->the_post();
 
-										$percentage =  round(get_percentage(get_field('goal_total_amount_needed'),get_field('goal_amount_reached'))) . '%';
+					<?php 					
+						if( $goals->have_posts() ) {
+							while( $goals->have_posts() ) {
+							$goals->the_post();
+							?>
 
-										?>
-										<div class="col-sm">
-											<div class="c-goal-block">
-												<a href="<?php the_permalink() ?>">
-													<div class="c-goal-block__title-container">
-														<span class="c-goal-block__label"><?php the_field('goal_label') ?>:</span>
-														<h2 class="mb-0"><?php the_title() ?></h2>
-													</div>
-													<img src="<?php the_field('goal_image') ?>" class="c-goal-block__img" />
-													<div class="c-goal-block__goal-container">
-
-														<div class="c-progress mb-3">
-															<div class="c-progress-bar" role="progressbar" style="width: <?php echo $percentage ?>"></div>
-														</div>
-														<div class="d-md-flex">
-															<div class="flex-md-grow-1">
-															<?php echo $percentage; ?>
-																<?php the_field('goal_reached_text') ?> 
-																<?php the_field('goal_amount_still_needed_text') ?> &euro; <?php echo number_format(get_substraction(get_field('goal_total_amount_needed'), get_field('goal_amount_reached')), 0, ',', '.') ?> 
-																<span class="c-goal-block__text-light">
-																	<?php the_field('goal_total_amount_needed_text') ?> &euro; <?php echo number_format(get_field('goal_total_amount_needed'), 0, ',', '.') ?>
-																</span>															</div>
-															<div>
-																<span class="c-button c-button--inversed"><?php the_field('goal_button_text') ?></span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</div>
-										</div>	
-										<?php
-										}
-									}
-								?>
-								</div>
-							</div>
-						</div>						
-
+							<?php get_template_part( 'loop-templates/content', 'goals' ); ?>
+								
+						<?php
+						}
+					}
+				?>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->

@@ -5,6 +5,7 @@
 $blue-3t:           #1c407f;
 $green-hmbc:        #13a79d; 
 $green-hmbc-bright: #00B8AB;
+$green-hmbc-light:  #d0edeb;
 $brown-gray:        #888888;  
 
 $colors: ();
@@ -14,6 +15,7 @@ $colors: map-merge(
     "blue-3t":          $blue-3t,
     "green-hmbc":       $green-hmbc,
     "green-hmbc-light": $green-hmbc-bright,
+    "green-hmbc-bright": $green-hmbc-light,
     "brown-gray":       $brown-gray
   ),
   $colors

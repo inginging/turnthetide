@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<footer class="wrapper c-footer mt-4" id="wrapper-footer">
+<footer class="c-footer-bottom" id="wrapper-footer">
 
 	<div class="container">
 
@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer >
 
-
+						<span>© Stichting Turn the Tide &nbsp; &#9825; &nbsp; website: Code Oranje Development &nbsp; &#9825; &nbsp; design: &nbsp; Co Peters &nbsp; &#9825; &nbsp; fotografie: Scheurwater Fotografie</span>
 				</footer>
 
 			</div><!--col end -->

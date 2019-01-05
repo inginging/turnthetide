@@ -1,10 +1,7 @@
 .c-project-block {
     padding-bottom: 1rem;
     border-bottom: 2px solid $blue-3t;
-    margin-bottom: 1rem;
-    @include media-breakpoint-up(md) { 
-        margin-bottom: 0;
-    }
+    margin-bottom: 3rem;
 }
 
 .c-project-block__img {
@@ -24,10 +21,6 @@
     &:hover {
         text-decoration: none;
     }
-}
-
-.c-project__img {
-    width: 100%;
 }
 
 .c-projects-sidebar__title {

@@ -14,13 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="container">
-			<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+			<div class="c-image-container">
+				<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+			</div>
 		</div>
 	<?php } ?>
 
 	<div class="wrapper">
 		<div class="container text-center <?php if (!has_post_thumbnail() ) { echo 'mt-7'; } ?>">
-		<span class="page-label"><?php the_field('page_label') ?></span>
+		<span class="page-label"><?php the_field('archive_title', 'option'); ?></span>
 			<h1><?php the_title(); ?></h1>
 		</div>
 	</div>

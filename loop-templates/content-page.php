@@ -11,6 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<?php if ( has_post_video() ) { ?>
+		<div class="container">
+				<?php echo do_shortcode('[video src="https://youtu.be/91yjbWmWj0g" ]'); ?>
+		</div>
+	<?php } ?>
 
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="container">
@@ -20,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="wrapper">
 		<div class="container text-center <?php if (!has_post_thumbnail() ) { echo 'mt-7'; } ?>">
-			<span class="page-label"><?php the_field('page_label') ?></span>
-			<h1><?php  the_title(); ?></h1>
+			<span class="page-label"><?php  the_title(); ?></span>
+			<h1><?php the_field('page_label') ?></h1>
 		</div>
 	</div>
 
@@ -30,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 col-xs-12">
 					<div class="c-content">
-
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>

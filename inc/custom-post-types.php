@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+
 function register_projects_init() {
     $project_labels = array(
         'name'               => 'Projects',
@@ -20,7 +22,8 @@ function register_projects_init() {
         'public'             => true,
         'capability_type'    => 'post',
         'has_archive'        => false,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+        'rewrite'            => array('slug' => 'projecten')
     );
     register_post_type('projects', $project_args);
 }
@@ -36,7 +39,8 @@ function register_goals_init() {
         'public'             => true,
         'capability_type'    => 'post',
         'has_archive'        => false,
-        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
+        'rewrite'            => array('slug' => 'doelen')
     );
     register_post_type('goals', $goal_args);
 }
