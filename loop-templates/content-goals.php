@@ -12,7 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php 			
+<?php 
+	$goal = get_field('goal_id'); 			
     total_donations_reached_per_project($goal, $post->ID);
     $percentage =  round(get_percentage(get_field('goal_total_amount_needed'),get_field('goal_amount_reached'))) . '%';
 ?>
@@ -24,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="c-goal-block">
                         <a href="<?php the_permalink() ?>">
                             <div class="c-goal-block__title-container">
-                                <span class="c-goal-block__label"><?php the_field('goal_label') ?>:</span>
+                                <span class="c-goal-block__label"><?php the_field('goal_label', 'option') ?></span>
                                 <h2 class="mb-0"><?php the_title() ?></h2>
                             </div>
                             <div class="c-image-container c-image-container--large">
@@ -38,14 +39,14 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <div class="d-md-flex">
                                     <div class="flex-md-grow-1">
                                     <?php echo $percentage; ?>
-                                        <?php the_field('goal_reached_text') ?> 
-                                        <?php the_field('goal_amount_still_needed_text') ?> &euro; <?php echo number_format(get_substraction(get_field('goal_total_amount_needed'), get_field('goal_amount_reached')), 0, ',', '.') ?> 
+                                        <?php the_field('goal_reached_text', 'option') ?> 
+                                        <?php the_field('goal_amount_still_needed_text', 'option') ?> &euro; <?php echo number_format(get_substraction(get_field('goal_total_amount_needed'), get_field('goal_amount_reached')), 0, ',', '.') ?> 
                                         <span class="c-goal-block__text-light">
-                                            <?php the_field('goal_total_amount_needed_text') ?> &euro; <?php echo number_format(get_field('goal_total_amount_needed'), 0, ',', '.') ?>
+                                            <?php the_field('goal_total_amount_needed_text', 'option') ?> &euro; <?php echo number_format(get_field('goal_total_amount_needed'), 0, ',', '.') ?>
                                         </span>															
                                     </div>
                                     <div>
-                                        <span class="c-button c-button--inversed"><?php the_field('goal_button_text') ?></span>
+                                        <span class="c-button c-button--inversed"><?php the_field('goal_button_text', 'option') ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -55,3 +56,4 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
         </div>
     </div>
+    

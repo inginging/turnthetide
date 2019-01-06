@@ -60,18 +60,18 @@ $goals = new WP_Query( $argsGoals );
 
 		<?php endwhile; // end of the loop. ?>
 
-											<?php 					
-						if( $goals->have_posts() ) {
-							while( $goals->have_posts() ) {
-							$goals->the_post();
-							?>
+		<?php 					
+				if( $goals->have_posts() ) {
+					while( $goals->have_posts() ) {
+					$goals->the_post();
+					?>
 
-						<!-- Loop through custom post type for goals -->
-							<?php get_template_part( 'loop-templates/content', 'goals' ); ?>			
-						<?php
-						}
-					}
-				?>
+				<!-- Loop through custom post type for goals -->
+					<?php get_template_part( 'loop-templates/content', 'goals' ); ?>			
+				<?php
+				}
+			}
+		?>
 
 	</div><!-- #content -->
 </div><!-- #container -->

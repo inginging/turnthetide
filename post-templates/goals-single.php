@@ -72,6 +72,7 @@ $goals = new WP_Query( $argsGoal );
 					<div class="col-lg-8 col-xs-12">
 						<?php the_field('goal_form_text') ?>
 						<div class="pt-3">
+							<input id="goalId" type="hidden" value="<?php the_field('goal_id') ?>"/> 
 							<?php echo do_shortcode("[doneren_met_mollie]"); ?>
 						</div>
 					</div>
@@ -85,7 +86,6 @@ $goals = new WP_Query( $argsGoal );
 				</div>
 			</div>	
 		</div>
-		
 
 
 
