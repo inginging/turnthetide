@@ -15,11 +15,15 @@ h1 {
 
 h1.callout {
     color: $green-hmbc;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     max-width: 768px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 2rem;
+    }
 }
 
 h2 {

@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md">
+		<nav class="c-navbar navbar navbar-expand-md">
 
 			<div class="container">
 
@@ -55,14 +55,41 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php else: ?>
 
-						<div class="c-logo ml-3">
+						<div class="c-logo">
 							<?php the_custom_logo() ?>
 						</div>
 
 					<?php endif; ?><!-- end custom logo -->
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"></span>
+				<button class="c-navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+					<span class="c-navbar-toggler__icon navbar-toggler-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+						<!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+						<title>EBD03131-A5BF-4326-9EBD-BC97DA5DBEB8</title>
+						<desc>Created with sketchtool.</desc>
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="1.-Home-mobile" transform="translate(-264.000000, -16.000000)">
+								<g id="Group-11" transform="translate(264.000000, 16.000000)">
+									<g id="Group-12">
+										<rect id="Rectangle" stroke="#1C407F" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="4"/>
+										<g id="Group-10" transform="translate(8.000000, 8.000000)" fill="#1C407F">
+											<g id="Group-9">
+												<rect id="Rectangle" x="0" y="0" width="24" height="2"/>
+												<rect id="Rectangle" x="0" y="6" width="24" height="2"/>
+												<rect id="Rectangle" x="0" y="12" width="24" height="2"/>
+											</g>
+										</g>
+										<text id="MENU" font-family="Roboto-Bold, Roboto" font-size="7" font-weight="bold" line-spacing="8" letter-spacing="1" fill="#1C407F">
+											<tspan x="8.69042969" y="34">MEN</tspan>
+											<tspan x="26.7021484" y="34">U</tspan>
+										</text>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+
+					</span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->

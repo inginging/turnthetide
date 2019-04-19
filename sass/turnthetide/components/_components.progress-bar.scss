@@ -1,11 +1,11 @@
 .c-progress {
     display: flex;
     height: 0.5rem;
-    overflow: hidden;
     font-size: .75rem;
     background-color: rgba(19, 167, 157, 0.2);
     border-radius: .25rem;
     max-width: 300px;
+    position: relative;
 }
   
 .c-progress-bar {
@@ -18,4 +18,14 @@
     background-color: $green-hmbc;
     border-radius: .25rem;
     transition: width .6s ease;
+}
+
+.c-progress-bar--completed {
+    &:after {
+        content: "♥";
+        font-size: 2rem;
+        color: $green-hmbc;
+        position: absolute;
+        right: -1.5rem;
+    }
 }

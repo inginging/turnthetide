@@ -19,8 +19,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 	<div class="c-footer-top">
-		<div class="container d-flex">
-			<?php dynamic_sidebar( 'footerfull' ); ?>
+		<div class="container c-footer-top__container">
+			<div class="row">
+				<?php dynamic_sidebar( 'footerfull' ); ?>
+			</div>
 		</div>
 	</div>
 

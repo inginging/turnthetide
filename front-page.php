@@ -44,14 +44,14 @@ $goals = new WP_Query( $argsGoal );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-						<div class="container wrapper text-center">
+						<div class="container c-wrapper text-center">
 
 							<h1 class="callout"><?php echo get_bloginfo('description'); ?></h1>
 
 						</div>
 
 						<!-- Loop through custom post type for projects -->
-						<div class="container wrapper pt-3 pb-0">
+						<div class="container c-wrapper pt-md-3 pb-md-0">
 							<div class="row">
 								<?php 					
 									if( $projects->have_posts() ) {

@@ -76,3 +76,18 @@ $spacers: map-merge(
 );
 
 $grid-gutter-width:           32px;
+
+$container-max-widths: (
+  sm: 1137px,
+  md: 1138px,
+  lg: 1139px,
+  xl: 1140px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 992px,
+  lg: 993px,
+  xl: 1200px
+) !default;

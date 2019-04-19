@@ -3,6 +3,10 @@
     padding: 2rem 1rem;
 }
 
+.c-footer-top__container {
+    display: flex;
+}
+
 .c-footer-bottom {
     background-color: $gray-dark;
     padding: 1rem 0;
@@ -15,11 +19,26 @@
     font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 1.25;
+    margin-bottom: 1rem;
 }
 
 .c-footer__content{
+
+
     ul {
+        margin-bottom: 1.5rem;
         padding: 0;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $gray-light; 
+
+        @include media-breakpoint-up(md) {
+            border-bottom: none; 
+        }
+    
+        @include media-breakpoint-up(lg) { 
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
     }
 
