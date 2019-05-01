@@ -1,40 +1,49 @@
 .c-content {
-    .lead {
-        margin-bottom: 2rem;
-        line-height: 1.6;
-    }
+	.lead {
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
 
-    h2 {
-        color: $gray-dark;
-    }
+	h2 {
+		color: $gray-dark;
+	}
 
-    figcaption {
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-        width: 80%;
-        float: right;
-        text-align: left;
-    }
+	figcaption {
+		font-size: 0.875rem;
+		margin-bottom: 1rem;
 
-    h2, h3, h4, p, blockquote {
-        clear: both;
-    }
+		@include media-breakpoint-up(md) {
+			width: 80%;
+			float: right;
+			text-align: left;
+		}
+	}
 
-    .alignright {
-        display: block;
-        margin-right: 0;
-    }
+	h2,
+	h3,
+	h4,
+	p,
+	blockquote {
+		clear: both;
+	}
 
-    figure {
-        text-align: right;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
+	.alignright {
+		display: block;
+		margin-right: 0;
+	}
 
-    figure img {
-        width: 80% !important; 
-        margin-bottom: 0.5rem;
+	figure {
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
 
-    }
-
-} 
+	figure img {
+		@include media-breakpoint-up(md) {
+			width: 80% !important;
+		}
+		margin-bottom: 0.5rem;
+	}
+}

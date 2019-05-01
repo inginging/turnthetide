@@ -1,65 +1,79 @@
 .c-navigation-main {
-    @include media-breakpoint-up(md) { 
-        align-self: flex-end;
-    }
-    font-size: 1.25rem;
-    font-family: 'Roboto Condensed';
-    font-weight: 700;
-    padding: 1rem 0;
+	@include media-breakpoint-up(md) {
+		align-self: flex-end;
+	}
+	font-size: 1.25rem;
+	font-family: "Roboto Condensed";
+	font-weight: 700;
+	padding: 1rem 0;
+
+	@include media-breakpoint-down(md) {
+		background-color: $white;
+		padding-top: 5rem;
+		padding-left: 1rem;
+	}
 }
 
 .c-navigation-main__list {
-    .nav-link {
-        color: $blue-3t;
-        text-transform: uppercase;
-        position: relative;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+	.nav-link {
+		color: $blue-3t;
+		text-transform: uppercase;
+		position: relative;
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
 
-        &:hover {
-            color: $gray-medium;
-        }
+		&:hover {
+			color: $gray-medium;
+		}
 
-        &:hover:after {
-            content: '';
-            padding: 0 0.5rem;
-            position: absolute;
-            height: 2px;
-            width: calc(100% - 2rem);
-            background-color: $gray-medium;
-            bottom: 0.25rem;
-            left: 1rem;
-        } 
-    }
+		&:hover:after {
+			content: "";
+			padding: 0 0.5rem;
+			position: absolute;
+			height: 2px;
+			width: calc(100% - 2rem);
+			background-color: $gray-medium;
+			bottom: 0.25rem;
+			left: 1rem;
+		}
+	}
 
-    .active .nav-link {
-        color: $gray-medium;
-        &:after {
-            content: '';
-            padding: 0 0.5rem;
-            position: absolute;
-            height: 2px;
-            width: calc(100% - 2rem);
-            background-color: $gray-medium;
-            bottom: 0.25rem;
-            left: 1rem;
-        }
-    }
+	.active .nav-link {
+		color: $gray-medium;
+		&:after {
+			content: "";
+			padding: 0 0.5rem;
+			position: absolute;
+			height: 2px;
+			width: calc(100% - 2rem);
+			background-color: $gray-medium;
+			bottom: 0.25rem;
+			left: 1rem;
+		}
+	}
 }
 
 .c-navigation-main__button {
-    .nav-link {
-        margin-left: 1rem;
-        @include button;
-        font-size: 1.25rem;
-        top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
+	.nav-link {
+		margin-top: 1rem;
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+			margin-left: 1rem;
+		}
+		@include button;
+		font-size: 1.25rem;
+		top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
 
-    &.active .nav-link {
-        color: $white;
-        &:after {
-            content: none;
-        }
-    }
+	&.active .nav-link {
+		color: $white;
+		&:after {
+			content: none;
+		}
+	}
+}
+
+.lock-scroll {
+	overflow: hidden;
 }

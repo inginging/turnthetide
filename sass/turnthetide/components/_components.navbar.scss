@@ -1,24 +1,24 @@
 .c-navbar {
-    padding: 0;
+	padding: 0;
 
-    .container {
-
-        @include media-breakpoint-down(sm) {
-            align-items: flex-start; 
-            justify-content: space-between;
-            margin-left: 0.5rem;
-            padding-left: 0;
-            padding-right: 1rem;  
-        }
-    }
+	.container {
+		@include media-breakpoint-down(sm) {
+			align-items: flex-start;
+			justify-content: space-between;
+			margin-left: 0.5rem;
+			padding-left: 0;
+			padding-right: 1rem;
+		}
+	}
 }
 
 .c-navbar-toggler {
-    margin-top: 1rem;
-    padding: 0;
+	margin-top: 1rem;
+	padding: 0;
+	z-index: 200;
 }
 
 .c-navbar-toggler__icon {
-    width: 40px;
-    height: 40px;
+	width: 40px;
+	height: 40px;
 }

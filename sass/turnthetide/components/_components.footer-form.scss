@@ -1,22 +1,27 @@
+.c-footer-form {
+	margin-bottom: 2rem;
+}
+
 .c-footer-form__label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: $gray-dark;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	color: $gray-dark;
+	display: block;
 }
 
 .c-footer-form__input {
-    border-radius: 8px;
-    border: 1px solid $gray-light;
-    padding: 0.25rem 0.5rem;
-    margin-bottom: 0.5rem;
+	border-radius: 8px;
+	border: 1px solid $gray-light;
+	padding: 0.25rem 0.5rem;
+	margin-bottom: 0.5rem;
+	display: block;
 }
 
 .c-footer-form__button {
-    border: none;
-    @include button;
-    
-    &:hover {
-        cursor: pointer;
-    }
+	border: none;
+	@include button;
 
+	&:hover {
+		cursor: pointer;
+	}
 }
