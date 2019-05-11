@@ -92,19 +92,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</span>
 				</button>
 
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'c-navigation-main collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'c-navigation-main__list navbar-nav ml-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				<div class="c-navigation collapse navbar-collapse" id="navbarNavDropdown">
+
+					<!-- The WordPress Menu goes here -->
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'c-navigation-main',
+							'container_id'    => '',
+							'menu_class'      => 'c-navigation-main__list navbar-nav ml-auto',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'           => 2,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+					<?php
+						wp_nav_menu(
+							array(
+							'theme_location'  => 'meta',
+							'container_class' => 'c-navigation-meta',
+							'container_id'    => 'metaMenu',
+							'menu_class'      => 'c-navigation-meta__list',
+							'fallback_cb'     => '',
+							'menu_id'         => 'meta_menu',
+							'depth'           => 1,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						);
+						?>
+
+				</div>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

@@ -104,6 +104,10 @@ require get_template_directory() . '/inc/functions/function-sums.php';
  */
 require get_template_directory() . '/inc/functions/function-acf-additions.php'; 
 
+function register_childtheme_menus() {
+	register_nav_menu('meta', __( 'Meta Menu', 'child-theme-textdomain' ));
+} 
+add_action( 'init', 'register_childtheme_menus' );
 
 function cc_mime_types($mimes) {
 	$mimes['svg'] = 'image/svg+xml';

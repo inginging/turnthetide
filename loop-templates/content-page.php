@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( has_post_thumbnail() ) { ?>
 		<div class="container">
-			<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+			<div class="c-image-container">
+				<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+			</div>
 		</div>
 	<?php } ?>
 
@@ -28,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<span class="page-label"><?php  the_title(); ?></span>
 			<h1><?php the_field('page_label') ?></h1>
 		</div>
-	</div>
+	</div> 
 
 	<div class="wrapper pt-0"> 
 		<div class="container">

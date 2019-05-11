@@ -20,7 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php if ( has_post_thumbnail() ) { ?>
 				<div class="container">
-					<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>
+					<div class="c-image-container">
+						<img src="<?php the_post_thumbnail_url(); ?>" style="width: 100%"/>'
+					</div>
 				</div>
 			<?php 
 			} 

@@ -1,6 +1,7 @@
-.c-navigation-main {
+.c-navigation {
 	@include media-breakpoint-up(md) {
 		align-self: flex-end;
+		justify-content: flex-end;
 	}
 	font-size: 1.25rem;
 	font-family: "Roboto Condensed";
@@ -76,4 +77,36 @@
 
 .lock-scroll {
 	overflow: hidden;
+}
+
+.c-navigation-meta {
+	font-family: "Roboto Condensed";
+	font-weight: 400;
+	font-size: 1rem;
+	top: 2rem;
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: 2rem;
+		right: 0;
+	}
+}
+
+.c-navigation-meta__list {
+	padding-left: 0;
+	.nav-item {
+		list-style-type: none;
+		@include media-breakpoint-up(md) {
+			display: inline-block;
+		}
+	}
+
+	.nav-link {
+		color: $gray-medium;
+		text-decoration: underline;
+		text-transform: uppercase;
+		@include media-breakpoint-up(md) {
+		}
+	}
 }
