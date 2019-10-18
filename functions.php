@@ -102,7 +102,7 @@ require get_template_directory() . '/inc/functions/function-sums.php';
 /**
  * Load Advanced Custom Fields Additions
  */
-require get_template_directory() . '/inc/functions/function-acf-additions.php'; 
+require get_template_directory() . '/inc/functions/function-acf-additions.php';
 
 function register_childtheme_menus() {
 	register_nav_menu('meta', __( 'Meta Menu', 'child-theme-textdomain' ));

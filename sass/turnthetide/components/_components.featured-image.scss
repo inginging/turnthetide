@@ -1,7 +1,19 @@
 .c-featured-image {
-    @include media-breakpoint-up(md) { 
-        text-align: center;
-        top: -4rem;
-        position: relative;
-    }
+	text-align: center;
+	margin-top: 1rem;
+
+	img {
+		max-width: 100px;
+
+		@include media-breakpoint-up(md) {
+			max-width: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		top: -4rem;
+		position: relative;
+		margin-top: 0;
+		max-width: none;
+	}
 }

@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     </div>
 
                                     <div>
-                                        <span class="c-button c-button--inversed">
+                                        <span class="c-button">
                                             <?php if ( $complete_goal ): ?>
                                                 <?php the_field('goal_complete_button_text', 'option') ?>
                                             <?php else: ?>

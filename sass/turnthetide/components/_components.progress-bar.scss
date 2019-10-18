@@ -1,31 +1,32 @@
 .c-progress {
-    display: flex;
-    height: 0.5rem;
-    font-size: .75rem;
-    background-color: rgba(19, 167, 157, 0.2);
-    border-radius: .25rem;
-    max-width: 300px;
-    position: relative;
+	display: flex;
+	height: 0.5rem;
+	font-size: 0.75rem;
+	background-color: rgba(19, 167, 157, 0.2);
+	border-radius: 0.25rem;
+	max-width: 300px;
+	position: relative;
 }
-  
+
 .c-progress-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $green-hmbc;
-    border-radius: .25rem;
-    transition: width .6s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: $green-hmbc;
+	border-radius: 0.25rem;
+	transition: width 0.6s ease;
 }
 
 .c-progress-bar--completed {
-    &:after {
-        content: "♥";
-        font-size: 2rem;
-        color: $green-hmbc;
-        position: absolute;
-        right: -1.5rem;
-    }
+	width: 100% !important;
+	&:after {
+		content: "♥";
+		font-size: 2rem;
+		color: $green-hmbc;
+		position: absolute;
+		right: -1.5rem;
+	}
 }
