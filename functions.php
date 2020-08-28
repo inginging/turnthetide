@@ -130,3 +130,20 @@ function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function give_edit_theme_options( $caps ) {
+	
+	/* check if the user has the edit_pages capability */
+	if( ! empty( $caps[ 'edit_pages' ] ) ) {
+		
+		/* give the user the edit theme options capability */
+		$caps[ 'edit_theme_options' ] = true;
+		
+	}
+	
+	/* return the modified capabilities */
+	return $caps;
+	
+}
+
+add_filter( 'user_has_cap', 'give_edit_theme_options' );
