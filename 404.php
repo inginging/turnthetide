@@ -1,6 +1,11 @@
 <?php
 /**
- * The template for displaying 404 pages (not found).
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package understrap
  */
@@ -12,81 +17,50 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
 
-<div class="wrapper" id="error-404-wrapper">
+<div id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-		<div class="row">
+			<main class="site-main" id="main">
 
-			<div class="col-md-12 content-area" id="primary">
+			<article class="post-355 page type-page status-publish has-post-thumbnail hentry" id="post-355">
+	
+			<div class="container">
+				<div class="c-image-container">
+					<img src="http://new.turnthetide.nl/wp-content/uploads/2019/05/mislukt.jpg" style="width: 100%">
+				</div>
+			</div>
 
-				<main class="site-main" id="main">
+			<div class="wrapper">
+				<div class="container text-center ">
+					<span class="page-label">Pagina niet gevonden</span>
+					<h1>Pagina niet gevonden</h1>
+				</div>
+			</div> 
 
-					<section class="error-404 not-found">
+			<div class="wrapper pt-0"> 
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 col-xs-12">
+							<div class="c-content">
+								<h2>De pagina die u zoekt is niet gevonden.</h2>
+								<p>Ga naar <a href="/">home</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-						<header class="page-header">
+	</article>
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'understrap' ); ?></h1>
+			</main><!-- #main -->
 
-						</header><!-- .page-header -->
-
-						<div class="page-content">
-
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'understrap' ); ?></p>
-
-							<?php get_search_form(); ?>
-
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-								<div class="widget widget_categories">
-
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
-
-									<ul>
-										<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
-										?>
-									</ul>
-
-								</div><!-- .widget -->
-
-							<?php endif; ?>
-
-							<?php
-
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
-
-						</div><!-- .page-content -->
-
-					</section><!-- .error-404 -->
-
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
-		</div><!-- .row -->
-
-	</div><!-- Container end -->
-
+		<!-- Do the right sidebar check -->
+		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

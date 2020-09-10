@@ -1,19 +1,115 @@
 .c-form {
+	select,
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		color: $blue-3t;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		box-shadow: none;
+		border: 1px solid $gray-light;
 
-    select, input[type=text], textarea {
-        color: $blue-3t;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        box-shadow: none;
-        border: 1px solid $gray-light;
+		&:active {
+			border-color: $blue-3t;
+		}
+	}
 
-        &:active {
-            border-color: $blue-3t;
-        }
-    }
+	input[type="submit"] {
+		border: none;
+		cursor: pointer;
+	}
 
-    input[type=submit] {
-        border: none;
-        cursor: pointer;
-    }
-} 
+	a {
+		color: $blue-3t;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+	}
+}
+
+.c-form_wrapper {
+	.c-form {
+		h3.gform_title {
+			font-size: 2rem;
+			color: $blue-3t;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		span.gform_description {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.gfield_description {
+			margin-bottom: 0.5rem;
+		}
+
+		.gfield_label {
+		}
+
+		.gfield_required {
+			margin-left: 2px;
+		}
+
+		div.ginput_container {
+			margin-top: 0 !important;
+		}
+	}
+
+	input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+		font-size: inherit !important;
+		color: $blue-3t !important;
+		padding: 0.5rem !important;
+		border-radius: 0.5rem !important;
+		box-shadow: none !important;
+		border: 1px solid $brown-gray !important;
+	}
+
+	ul.gform_fields li.gfield {
+		margin-top: 2rem !important;
+	}
+
+	.top_label input.medium {
+		width: 100% !important;
+	}
+
+	.ginput_container_consent {
+		position: relative;
+
+		input[type="checkbox"] {
+			position: absolute;
+			top: 5px;
+		}
+
+		.gfield_consent_label {
+			padding-left: 1.5rem;
+		}
+	}
+
+	.gfield_radio li label {
+		font-size: 1rem !important;
+		margin-left: 10px !important;
+	}
+
+	.gfield_radio li input[type="radio"] {
+		margin-top: 2px !important;
+	}
+
+	.gform_button {
+		@include button;
+	}
+
+	a {
+		color: $blue-3t;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+	}
+}

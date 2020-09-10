@@ -63,7 +63,7 @@ $goals = new WP_Query( $argsGoal );
 							<?php elseif ( $new_goal ): ?>
 
 								<?php the_field('goal_amount_reached') ?>
-								<?php the_field('goal_new_text', 'option') ?> <?php the_field('goal_amount_still_needed_text', 'option') ?> &euro; <?php the_field('goal_total_amount_needed') ?></span>
+								<?php the_field('goal_new_text', 'option') ?> <?php the_field('goal_amount_still_needed_text', 'option') ?>&euro;&nbsp;<?php the_field('goal_total_amount_needed') ?>
 
 							<?php else: ?>
 

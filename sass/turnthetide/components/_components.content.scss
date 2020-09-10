@@ -46,4 +46,14 @@
 		}
 		margin-bottom: 0.5rem;
 	}
+
+	a {
+		color: $blue-3t;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+	}
 }
